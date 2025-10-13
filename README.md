@@ -27,40 +27,6 @@ This link points to the current Vercel preview of the `frontend` app so you can 
 
 ---
 
-## �🗂️ Project Structure
-
-```
-SIH-SurakshaSaathi-DisasterMgmt-Training/
-│
-├── frontend/            # Frontend application (Vite + React + TypeScript)
-│   ├── src/             # Core application source
-│   │   ├── components/  # Reusable UI elements
-│   │   ├── pages/       # App pages (Dashboard, Trainings, Users...)
-│   │   ├── assets/      # Icons, images, and logos
-│   │   └── styles/      # TailwindCSS and overrides
-│   ├── public/          # Static assets and manifest
-│   └── package.json     # Frontend scripts & dependencies
-│
-├── README.md            # Project overview and instructions
-# � Suraksha Saathi: Disaster Management Training
-
-Suraksha Saathi is India’s premier, real-time disaster management training and monitoring platform, crafted for the National Disaster Management Authority (NDMA). It redefines how institutions organize, log, and analyze disaster training initiatives, unlocking robust reporting and collaborative preparedness at scale.
-
----
-
-## ✨ Key Features
-
-- **Live Monitoring Dashboard** — Track disaster readiness activities and visualize training coverage across locations in real time.
-- **Training Data Entry** — Submit details of drills or exercises using streamlined, validated forms.
-- **Comprehensive Analytics** — Built-in charts provide insights into progress, participation, and gaps.
-- **Role-Specific Access** — Secure login with customized access levels for trainers, trainees, and admins.
-- **Mobile & Desktop Ready** — Progressive Web App (PWA) design for offline/field use.
-- **Rich, Responsive UI** — Built with React, Radix UI, Tailwind CSS, and shadcn/UI.
-- **Notifications** — Real-time feedback, alerts, and status updates for critical workflows.
-- **Advanced Form Validation** — Robust submission handling via react-hook-form.
-
----
-
 ## 🗂️ Project Structure
 
 SurakshaSaathi-DisasterMgmt/
