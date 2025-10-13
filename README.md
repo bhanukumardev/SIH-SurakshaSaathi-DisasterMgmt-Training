@@ -32,101 +32,122 @@ SIH-SurakshaSaathi-DisasterMgmt-Training/
 │   └── package.json     # Frontend scripts & dependencies
 │
 ├── README.md            # Project overview and instructions
-└── .gitignore
-```
+# � Suraksha Saathi: Disaster Management Training
+
+Suraksha Saathi is India’s premier, real-time disaster management training and monitoring platform, crafted for the National Disaster Management Authority (NDMA). It redefines how institutions organize, log, and analyze disaster training initiatives, unlocking robust reporting and collaborative preparedness at scale.
 
 ---
 
-## 📦 Tech Stack
+## ✨ Key Features
 
-- React — Front-end framework for UI
-- TypeScript — Safer, scalable code
-- Vite — Fast web build tool
-- Tailwind CSS — Utility-first responsive styling
-- Radix UI — Accessible UI primitives
-- shadcn-UI — Standardized component patterns
-- Recharts — Data visualization
-- React Query — Data fetching & caching
-
----
-
-## 🚀 Getting Started (Local)
-
-1. Clone the repo
-
-```bash
-git clone https://github.com/bhanukumardev/SIH-SurakshaSaathi-DisasterMgmt-Training.git
-```
-
-2. Enter the frontend folder
-
-```bash
-cd SIH-SurakshaSaathi-DisasterMgmt-Training/frontend
-```
-
-3. Install dependencies
-
-```bash
-npm install
-```
-
-4. Start development server
-
-```bash
-npm run dev
-```
-
-Open http://localhost:8080/ (or the address shown in the terminal).
+- **Live Monitoring Dashboard** — Track disaster readiness activities and visualize training coverage across locations in real time.
+- **Training Data Entry** — Submit details of drills or exercises using streamlined, validated forms.
+- **Comprehensive Analytics** — Built-in charts provide insights into progress, participation, and gaps.
+- **Role-Specific Access** — Secure login with customized access levels for trainers, trainees, and admins.
+- **Mobile & Desktop Ready** — Progressive Web App (PWA) design for offline/field use.
+- **Rich, Responsive UI** — Built with React, Radix UI, Tailwind CSS, and shadcn/UI.
+- **Notifications** — Real-time feedback, alerts, and status updates for critical workflows.
+- **Advanced Form Validation** — Robust submission handling via react-hook-form.
 
 ---
 
-## 🔥 Module Overview
+## 🗂️ Project Structure
 
-- **Dashboard** — Real-time summary of training activities, coverage maps, charts, and alerts.
-- **Training Submission** — Add new training events, document participants, and track performance.
-- **User Management** — Role-based access for trainers, trainees, and admins.
-- **Data Reporting** — Generate analytics for program effectiveness and readiness.
-- **Notifications** — Instant feedback on actions and critical warnings.
+SurakshaSaathi-DisasterMgmt/
+│
+├── frontend/
+│   ├── public/                   # Static files, manifest, icons
+│   ├── src/
+│   │   ├── assets/               # Images, SVGs, logos
+│   │   ├── components/           # Reusable UI components (cards, modals, inputs)
+│   │   ├── modules/              # Feature modules (dashboard, training, analytics, users)
+│   │   │    ├── Dashboard/
+│   │   │    │    ├── index.tsx   # Main dashboard UI
+│   │   │    │    ├── widgets/    # Stats, charts, maps
+│   │   │    │    └── api.ts      # Dashboard data API interactions
+│   │   │    ├── Training/
+│   │   │    │    ├── Form.tsx    # Add/edit training event
+│   │   │    │    └── api.ts      # Training CRUD via Supabase
+│   │   │    ├── Analytics/
+│   │   │    │    ├── Charts.tsx  # Data visualizations
+│   │   │    │    └── api.ts      # Analytics queries
+│   │   │    ├── User/
+│   │   │    │    ├── Login.tsx   # Auth UI (Supabase)
+│   │   │    │    ├── Register.tsx
+│   │   │    │    └── Profile.tsx
+│   │   │    │    └── api.ts      # User/profile endpoints
+│   │   ├── hooks/                # Custom React hooks (useAuth, useDashboard)
+│   │   ├── utils/                # Helpers (validators, formatters)
+│   │   ├── styles/               # Tailwind, CSS, custom styles
+│   │   ├── App.tsx               # Root React component
+│   │   ├── main.tsx              # Entrypoint
+│   │   └── supabaseClient.ts     # Supabase client configuration
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── backend/
+│   ├── src/
+│   │   ├── controllers/          # REST API controllers (Express/Node)
+│   │   │   ├── authController.ts # Supabase JWT/user management integration
+│   │   │   ├── trainingController.ts
+│   │   │   ├── dashboardController.ts
+│   │   │   └── analyticsController.ts
+│   │   ├── models/               # Schemas/types (zod or TypeORM)
+│   │   ├── routes/               # Express routes (modular)
+│   │   ├── services/             # Business logic, service layer
+│   │   ├── utils/                # Helpers (logging, error handling)
+│   │   ├── index.ts              # API server entrypoint
+│   │   └── supabase.ts           # Supabase server-side integration
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── database/
+│   ├── migrations/               # SQL migration scripts
+│   ├── schema.sql                # Database schema
+│   └── seed.sql                  # Seed data for initial setup
+│
+├── .render.yaml                  # Render deployment configuration
+├── docker-compose.yaml           # Local development setup
+├── README.md
+└── .env                          # Environment variables (Supabase keys, etc)
 
 ---
 
-## 🌐 Deployment (Vercel)
+## 🔗 Feature-Backend Mapping
 
-Recommended: Deploy the `frontend` directory as a standalone project in Vercel.
+- **Authentication**: Supabase handles secure user login/registration (frontend via `@supabase/supabase-js`, backend via JWT/session validation).
 
-- Project root in Vercel: `frontend`
-- Build Command: `npm run vercel-build`
-- Output Directory: `dist`
-- Node Version: `18.x` (set in Project Settings or via `package.json` `engines`)
+- **Dashboard Analytics**: Data fetched using React Query, backed by Supabase tables/REST endpoints.
 
-This repo includes a `vercel-build` script that performs a clean install and builds the frontend to avoid platform-specific optional-dependency issues.
+- **Training Module**: CRUD operations via Supabase from both client and backend, providing validation and access control in Node.
 
-Alternatively you can deploy to Netlify or other static hosting providers; point the build to the `frontend` folder and use `npm run build` as the build command.
+- **Interactive Forms, Alerts, and Charts**: React (with Recharts, Radix UI); Supabase provides real-time data and triggers notifications if needed.
 
----
+- **Role Management**: Table in Supabase for users/roles. Middleware on backend for authorization.
 
-## 🔮 Future Enhancements
-
-- GIS integration for live hazard zones and impact simulations
-- Scheduled push reminders for training events
-- Sync with national disaster registries
-- AI-based analytics for predictive insights
-- Expanded accessibility and localization
+- **Advanced Reporting**: Backend aggregates data for dashboards, exports CSV/PDF via Node services.
 
 ---
 
-## 🤝 Contributions
+## 🌐 Deployment
 
-Contributions, suggestions, and bug reports are welcome. Please open an issue or submit a pull request.
+- **Frontend**: Vite/React app hosted on Render or Vercel static site (deploy the `frontend` directory).
 
----
+- **Backend/API**: Node.js Express/TypeScript microservice deployed on Render (autoscaling).
 
-## 📄 License
-
-MIT License
+- **Database**: Supabase cloud instance with tables for trainings, users, analytics, and logs.
 
 ---
 
-## 💡 Acknowledgements
+## 📝 How Data Flows
 
-Engineered to foster readiness, professionalism, and life-saving intervention across India’s disaster landscape.
+1. UI triggers an event (form submit, dashboard load, chart refresh).
+2. React hooks query/submit via `supabaseClient`; real-time updates stream via Supabase subscriptions.
+3. For sensitive operations, frontend talks to backend REST API (deployed on Render), which verifies JWT, applies business logic, and talks to Supabase server SDK.
+4. Analytics and dashboard data come from Supabase queries; advanced server-side joins, filters, and aggregations are executed in backend services.
+
+This structure delivers UX speed (React), scalability (modular backend on Render), and secure, instant data flow (Supabase) for a disaster training platform.
+
+---
+
+If you'd like, I can also add a `frontend/README.md` with developer-focused instructions (common workflows, environment variables, and debugging tips).
