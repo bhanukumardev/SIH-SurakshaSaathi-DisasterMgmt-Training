@@ -17,7 +17,17 @@ Suraksha Saathi is India’s premier, real-time disaster management training and
 
 ---
 
-## 🗂️ Project Structure
+## � Try the Live Demo
+
+Want to try the app right now? Open the live deployment in your browser:
+
+[https://sih-suraksha-saathi-disaster-mgmt-t.vercel.app](https://sih-suraksha-saathi-disaster-mgmt-t.vercel.app)
+
+This link points to the current Vercel preview of the `frontend` app so you can explore the dashboard, submit a training, and check analytics.
+
+---
+
+## �🗂️ Project Structure
 
 ```
 SIH-SurakshaSaathi-DisasterMgmt-Training/
@@ -151,3 +161,18 @@ This structure delivers UX speed (React), scalability (modular backend on Render
 ---
 
 If you'd like, I can also add a `frontend/README.md` with developer-focused instructions (common workflows, environment variables, and debugging tips).
+
+---
+
+## 👥 Team & Roles
+
+| Name | Role |
+|---|---|
+| Bhanu Kumar Dev | Project Manager / Lead Full Stack Dev |
+| Kumar Gaurav | Lead Frontend Developer |
+| Yuvakshi Jyala | UI/UX Designer & Documentation Lead |
+| Gaurav | Backend Developer & DevOps Engineer |
+| Kanishka | Database Architect & Supabase Integration |
+| Aman Sinha | QA Engineer & Junior Frontend Developer |
+
+If you'd like these listed under Contributions with contact or GitHub handles, I can add them.
