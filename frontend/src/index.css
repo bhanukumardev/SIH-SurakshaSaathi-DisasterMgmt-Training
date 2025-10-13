@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Indian Tricolor Theme - Light Mode */
+    --background: 0 0% 100%;
+    --foreground: 240 60% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 60% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 60% 10%;
+
+    /* Saffron - Primary (Authority & Energy) */
+    --primary: 30 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Navy Blue - Secondary (Trust & Stability) */
+    --secondary: 240 100% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Green - Success (Growth & Hope) */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 240 10% 46%;
+
+    --accent: 30 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 30 100% 60%;
+
+    --radius: 0.75rem;
+
+    /* Indian Gradients */
+    --gradient-tricolor: linear-gradient(135deg, hsl(30 100% 60%) 0%, hsl(0 0% 100%) 50%, hsl(142 76% 36%) 100%);
+    --gradient-saffron: linear-gradient(135deg, hsl(30 100% 60%) 0%, hsl(25 100% 55%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(240 100% 25%) 0%, hsl(235 100% 30%) 100%);
+    
+    /* Shadows with Indian colors */
+    --shadow-saffron: 0 10px 30px -10px hsl(30 100% 60% / 0.3);
+    --shadow-navy: 0 10px 30px -10px hsl(240 100% 25% / 0.3);
+    --shadow-green: 0 10px 30px -10px hsl(142 76% 36% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 60% 10%;
+    --sidebar-primary: 30 100% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 60% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 30 100% 60%;
+  }
+
+  .dark {
+    /* Indian Tricolor Theme - Dark Mode */
+    --background: 240 60% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 50% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 50% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Saffron - Adjusted for dark mode */
+    --primary: 30 100% 55%;
+    --primary-foreground: 240 60% 5%;
+    
+    /* Navy Blue - Lighter in dark mode */
+    --secondary: 240 100% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Green - Adjusted for dark mode */
+    --success: 142 76% 45%;
+    --success-foreground: 240 60% 5%;
+
+    --muted: 240 40% 12%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 30 100% 55%;
+    --accent-foreground: 240 60% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 40% 15%;
+    --input: 240 40% 15%;
+    --ring: 30 100% 55%;
+
+    /* Dark mode gradients */
+    --gradient-tricolor: linear-gradient(135deg, hsl(30 100% 55%) 0%, hsl(240 50% 15%) 50%, hsl(142 76% 45%) 100%);
+    --gradient-saffron: linear-gradient(135deg, hsl(30 100% 55%) 0%, hsl(25 100% 50%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(240 100% 40%) 0%, hsl(235 100% 45%) 100%);
+
+    --sidebar-background: 240 60% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 30 100% 55%;
+    --sidebar-primary-foreground: 240 60% 5%;
+    --sidebar-accent: 240 40% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 40% 15%;
+    --sidebar-ring: 30 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

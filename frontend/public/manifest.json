@@ -1,0 +1,44 @@
+{
+  "name": "Suraksha Saathi - Disaster Management Training",
+  "short_name": "Suraksha Saathi",
+  "description": "Real-Time Disaster Management Training Monitoring Platform by NDMA",
+  "theme_color": "#FF9933",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "start_url": "/",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["government", "education", "utilities"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "View training dashboard",
+      "url": "/dashboard",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Add Training",
+      "short_name": "Add Data",
+      "description": "Submit training data",
+      "url": "/data-entry",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
