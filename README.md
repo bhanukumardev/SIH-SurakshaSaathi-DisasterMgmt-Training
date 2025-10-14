@@ -11,83 +11,104 @@ Suraksha Saathi is India’s premier, real-time disaster management training and
 - **Comprehensive Analytics** — Built-in charts provide insights into progress, participation, and gaps.
 - **Role-Specific Access** — Secure login with customized access levels for trainers, trainees, and admins.
 - **Mobile & Desktop Ready** — Progressive Web App (PWA) design for offline/field use.
-- **Rich, Responsive UI** — Built with React, Radix UI, Tailwind CSS, and shadcn/UI.
-- **Notifications** — Real-time feedback, alerts, and status updates for critical workflows.
-- **Advanced Form Validation** — Robust submission handling via react-hook-form.
+
+
+## ✨ Features
+
+Suraksha Saathi is a real-time, multi-user platform for disaster management training and monitoring. Key capabilities:
+
+- Live monitoring dashboard with geospatial visualization and thematic analytics.
+- Fast, validated training data entry and incident logging for SDMAs, ATIs, NGOs, and other stakeholders.
+- Role-based authentication and access control (supports demo credentials for testing).
+- Automated reporting, push notifications, and exportable analytics for rapid assessment.
+- Integrated chatbot for onboarding and on-demand support.
+- Gamified drills and leaderboards to increase participation and retention.
+- Mobile-first PWA with bilingual (English/Hindi) UI and add-to-home support.
+- Indian-themed branding and compatibility with NDMA / state systems for easier integration and scale.
+- Privacy and data-security controls aligned with government standards.
+
+### Additional Capabilities
+
+- Community training modules (CPR, first aid), awareness sessions, and event-specific protocols.
+- User-driven incident reporting and performance evaluation tools.
+- Extensible architecture for future integrations and custom modules.
+
+These consolidated features reflect the platform’s focus on real-time operations, accessibility, and integration with existing disaster management workflows.
+
+## Try the Live Demo
+
+Want to try the app right now? Open the live deployments in your browser:
+
+- Production (live): [https://suraksha-saathi.vercel.app](https://suraksha-saathi.vercel.app)
+- Preview (frontend): [https://sih-suraksha-saathi-disaster-mgmt-t.vercel.app](https://sih-suraksha-saathi-disaster-mgmt-t.vercel.app)
+
+The Production link is the primary live site. The Preview link points to the latest frontend preview deployment where you can explore changes before they reach production.
+
+The Production link is the primary live site. The Preview link points to the latest frontend preview deployment where you can explore changes before they reach production.
 
 ---
 
-## � Try the Live Demo
+## 🗂️ Full Project Structure
 
-Want to try the app right now? Open the live deployment in your browser:
+The Suraksha Saathi project is a modern web/mobile application built with Vite, React and TypeScript, designed to integrate disaster-management monitoring features and scale for NDMA and partner organizations.
 
-[https://sih-suraksha-saathi-disaster-mgmt-t.vercel.app](https://sih-suraksha-saathi-disaster-mgmt-t.vercel.app)
+1. Frontend (Web + Mobile)
 
-This link points to the current Vercel preview of the `frontend` app so you can explore the dashboard, submit a training, and check analytics.
+Tech stack: Vite, React, TypeScript, Tailwind CSS, shadcn/UI
 
----
+Major folders and purpose:
 
-## 🗂️ Project Structure
+- /src — Main application source
+- components/ — Reusable UI elements (forms, dashboards, modals, maps)
+- pages/ — Page-level React components (login, dashboard, reports, GIS map, settings)
+- routes/ — Application routing and navigation
+- services/ — API clients and data-fetching logic
+- contexts/ — Global state (auth, notifications, settings)
+- assets/ — Images, icons and branding
+- utils/ — Helpers (validation, formatting, analytics)
+- /public — Static files, manifest, icons
+- /locales — Multilingual content (English / Hindi JSON files)
+- /styles — Global and theme stylesheets
 
-SurakshaSaathi-DisasterMgmt/
-│
-├── frontend/
-│   ├── public/                   # Static files, manifest, icons
-│   ├── src/
-│   │   ├── assets/               # Images, SVGs, logos
-│   │   ├── components/           # Reusable UI components (cards, modals, inputs)
-│   │   ├── modules/              # Feature modules (dashboard, training, analytics, users)
-│   │   │    ├── Dashboard/
-│   │   │    │    ├── index.tsx   # Main dashboard UI
-│   │   │    │    ├── widgets/    # Stats, charts, maps
-│   │   │    │    └── api.ts      # Dashboard data API interactions
-│   │   │    ├── Training/
-│   │   │    │    ├── Form.tsx    # Add/edit training event
-│   │   │    │    └── api.ts      # Training CRUD via Supabase
-│   │   │    ├── Analytics/
-│   │   │    │    ├── Charts.tsx  # Data visualizations
-│   │   │    │    └── api.ts      # Analytics queries
-│   │   │    ├── User/
-│   │   │    │    ├── Login.tsx   # Auth UI (Supabase)
-│   │   │    │    ├── Register.tsx
-│   │   │    │    └── Profile.tsx
-│   │   │    │    └── api.ts      # User/profile endpoints
-│   │   ├── hooks/                # Custom React hooks (useAuth, useDashboard)
-│   │   ├── utils/                # Helpers (validators, formatters)
-│   │   ├── styles/               # Tailwind, CSS, custom styles
-│   │   ├── App.tsx               # Root React component
-│   │   ├── main.tsx              # Entrypoint
-│   │   └── supabaseClient.ts     # Supabase client configuration
-│   ├── package.json
-│   └── tsconfig.json
-│
-├── backend/
-│   ├── src/
-│   │   ├── controllers/          # REST API controllers (Express/Node)
-│   │   │   ├── authController.ts # Supabase JWT/user management integration
-│   │   │   ├── trainingController.ts
-│   │   │   ├── dashboardController.ts
-│   │   │   └── analyticsController.ts
-│   │   ├── models/               # Schemas/types (zod or TypeORM)
-│   │   ├── routes/               # Express routes (modular)
-│   │   ├── services/             # Business logic, service layer
-│   │   ├── utils/                # Helpers (logging, error handling)
-│   │   ├── index.ts              # API server entrypoint
-│   │   └── supabase.ts           # Supabase server-side integration
-│   ├── package.json
-│   └── tsconfig.json
-│
-├── database/
-│   ├── migrations/               # SQL migration scripts
-│   ├── schema.sql                # Database schema
-│   └── seed.sql                  # Seed data for initial setup
-│
-├── .render.yaml                  # Render deployment configuration
-├── docker-compose.yaml           # Local development setup
-├── README.md
-└── .env                          # Environment variables (Supabase keys, etc)
+2. Backend / API
 
----
+Tech stack: Node.js (Express) or Python (FastAPI), PostgreSQL / Supabase
+
+API modules:
+
+- auth/ — Role-based access (admin, SDMA, ATI, NGO, community)
+- training/ — CRUD endpoints for training sessions and drills
+- gis/ — Geospatial endpoints (mapping, region queries)
+- report/ — Automated report generation and export (PDF/CSV)
+- analytics/ — Impact tracking, dashboard queries, gap detection
+- admin/ — User management and access control tools
+- alerts/ — Notification and push APIs
+
+3. GIS / Mapping Services
+
+- Mapbox or OpenLayers integration for geospatial visualization
+- Layered data for coverage, themes, institutional overlays, and event icons
+
+4. AI / ML and Engagement Modules
+
+- Predictive scheduling, anomaly detection, and dynamic alerts (Python/Node agents)
+- Chatbot integrations (Dialogflow/custom) for onboarding and FAQs
+- Gamified drills, leaderboards, and engagement tracking
+
+5. Deployment & Configuration
+
+- Frontend: Vercel (static) or similar; Backend: Render / Supabase; CI/CD pipelines
+- Environment configs: .env.local, manifest.json, role settings
+- Mobile installability via manifest and add-to-home support (PWA)
+
+6. Documentation & Support
+
+- /README.md — Project overview, quick start and links
+- /docs — User manuals, API docs, and integration guides
+- /tests — Frontend and backend test suites (Jest, React Testing Library, Pytest)
+
+This modular structure helps ensure Suraksha Saathi meets SIH and NDMA requirements for a real-time, multi-stakeholder disaster-management training monitoring platform.
+
 
 ## 🔗 Feature-Backend Mapping
 
