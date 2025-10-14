@@ -40,7 +40,6 @@ These consolidated features reflect the platform’s focus on real-time operatio
 Want to try the app right now? Open the live deployments in your browser:
 
 - Production (live): [https://suraksha-saathi.vercel.app](https://suraksha-saathi.vercel.app)
-- Preview (frontend): [https://sih-suraksha-saathi-disaster-mgmt-t.vercel.app](https://sih-suraksha-saathi-disaster-mgmt-t.vercel.app)
 
 The Production link is the primary live site. The Preview link points to the latest frontend preview deployment where you can explore changes before they reach production.
 
