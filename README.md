@@ -12,7 +12,7 @@
 
 ## 🚀 Live Demo
 
-**[View Demo →](#)** | **[Project Report](#)** | **[Video Walkthrough](#)**
+**[View Demo →](https://suraksha-saathi.vercel.app/)** | **[Project Report](#)** | **[Video Walkthrough](#)**
 
 ## 📌 Overview
 
