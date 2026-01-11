@@ -12,8 +12,6 @@
 
 ## 🚀 Live Demo
 
-**[View Demo →](https://suraksha-saathi.vercel.app/)** | **[Project Report](#)** | **[Video Walkthrough](https://lnkd.in/evpX3WGR)**
-
 🔗 [Check out our LinkedIn post](https://www.linkedin.com/posts/bhanu-kumar-dev-97b820313_sih2025-smartindiahackathon-sih-activity-7392459131451830272-aEJ2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE-td28BKSK7mi1hQgrYDtXPTq_qe8XRr18) for more details about the project.
 
 - 🌐 Check out our live platform: [suraksha-saathi.vercel.app](https://suraksha-saathi.vercel.app) ✅
