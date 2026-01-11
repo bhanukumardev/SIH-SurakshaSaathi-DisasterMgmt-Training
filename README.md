@@ -264,7 +264,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🏆 Acknowledgments
 
-- **Smart India Hackathon 2024** - For the opportunity and challenge
+- **Smart India Hackathon 2025** - For the opportunity and challenge
 - **Supabase Team** - For excellent documentation and support
 - **React & TypeScript Communities** - For amazing resources
 - **KIIT University** - For infrastructure and guidance
